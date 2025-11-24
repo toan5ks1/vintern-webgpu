@@ -26,7 +26,7 @@
     "format:check": "prettier --check .",
     "typegen": "tsc --build",
     "dev": "webpack serve --no-client-overlay",
-    "build": "webpack && (mkdir -p types && pnpm exec tsc --build || echo 'Warning: Type generation failed, continuing...')",
+    "build": "webpack",
     "test": "node --experimental-vm-modules --expose-gc node_modules/jest/bin/jest.js --verbose",
     "readme": "python ./docs/scripts/build_readme.py",
     "docs-api": "node ./docs/scripts/generate.js",
