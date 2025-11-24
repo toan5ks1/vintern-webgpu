@@ -45,16 +45,24 @@ class PostBuildPlugin {
       const ORT_BUNDLE_FILE = 'ort.bundle.min.mjs';
 
       // 1. Remove unnecessary files
-      {
+      try {
         const file = path.join(dist, ORT_BUNDLE_FILE);
         if (fs.existsSync(file)) fs.unlinkSync(file);
+      } catch (err) {
+        console.warn('PostBuildPlugin: Failed to remove', ORT_BUNDLE_FILE, err.message);
       }
 
       // 2. Copy unbundled JSEP file
-      {
+      try {
         const src = path.join(__dirname, 'node_modules/onnxruntime-web/dist', ORT_JSEP_FILE);
         const dest = path.join(dist, ORT_JSEP_FILE);
-        fs.copyFileSync(src, dest);
+        if (fs.existsSync(src)) {
+          fs.copyFileSync(src, dest);
+        } else {
+          console.warn('PostBuildPlugin: Source file not found:', src);
+        }
+      } catch (err) {
+        console.warn('PostBuildPlugin: Failed to copy', ORT_JSEP_FILE, err.message);
       }
     });
   }
