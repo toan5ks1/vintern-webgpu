@@ -1,0 +1,19 @@
+__pycache__
+.vscode
+node_modules
+.cache
+.DS_STORE
+deno.lock
+.idea
+.github
+
+# Do not track build artifacts/generated files
+/dist
+/types
+/models
+/docs
+
+# Do not track coverage reports
+/coverage
+/examples
+/tests
