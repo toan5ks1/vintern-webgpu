@@ -202,7 +202,8 @@ const BUNDLE_BUILD = buildConfig({
   ignoreModules: WEB_IGNORE_MODULES,
   plugins: [
     new StripNodePrefixPlugin(),
-    new PostBuildPlugin(),
+    // Disabled PostBuildPlugin temporarily for Vercel
+    // new PostBuildPlugin(),
   ],
 });
 
