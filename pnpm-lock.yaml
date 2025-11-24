@@ -20,6 +20,9 @@ importers:
       '@huggingface/jinja':
         specifier: ^0.5.1
         version: 0.5.1
+      onnxruntime-common:
+        specifier: 1.21.0
+        version: 1.21.0
       onnxruntime-node:
         specifier: 1.21.0
         version: 1.21.0
