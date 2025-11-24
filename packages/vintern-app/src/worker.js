@@ -136,10 +136,6 @@ async function processImage(imageUrl, data = {}) {
         outputs = await model.generate({
             ...inputs,
             max_new_tokens: 1024,
-            // repetition_penalty: 1.2,
-            // do_sample: true,
-            temperature: 0.75,
-            top_p: 0.95,
             streamer,
         });
     } catch (e) {
