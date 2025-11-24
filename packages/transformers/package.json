@@ -26,7 +26,7 @@
     "format:check": "prettier --check .",
     "typegen": "tsc --build",
     "dev": "webpack serve --no-client-overlay",
-    "build": "webpack && tsc --build",
+    "build": "webpack && mkdir -p types && tsc --build",
     "test": "node --experimental-vm-modules --expose-gc node_modules/jest/bin/jest.js --verbose",
     "readme": "python ./docs/scripts/build_readme.py",
     "docs-api": "node ./docs/scripts/generate.js",
