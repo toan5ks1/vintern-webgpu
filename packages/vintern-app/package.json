@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "cd ../transformers && pnpm install && pnpm run build",
     "build": "vite build",
     "preview": "vite preview"
   },

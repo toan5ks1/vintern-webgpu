@@ -17,4 +17,12 @@ export default defineConfig({
       '@huggingface/transformers': path.resolve(__dirname, '../transformers/dist/transformers.web.js'),
     },
   },
+  optimizeDeps: {
+    exclude: ['@huggingface/transformers']
+  },
+  build: {
+    rollupOptions: {
+      external: [],
+    }
+  },
 })
