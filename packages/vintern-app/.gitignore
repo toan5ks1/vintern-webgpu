@@ -10,7 +10,6 @@ deno.lock
 /dist
 /types
 /models
-/public/models
 
 # Do not track coverage reports
 /coverage

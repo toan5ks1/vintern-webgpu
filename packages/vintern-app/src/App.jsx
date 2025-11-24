@@ -294,6 +294,7 @@ function App() {
                       >
                         <option value="fp32">fp32</option>
                         <option value="fp16">fp16</option>
+                        <option value="q8">q8 (quantized)</option>
                       </select>
                   </div>
                   <div>
@@ -306,7 +307,7 @@ function App() {
                       >
                         <option value="fp32">fp32</option>
                         <option value="fp16">fp16</option>
-                        <option value="q8">q8</option>
+                        <option value="q8">q8 (quantized)</option>
                       </select>
                   </div>
                   <div>
