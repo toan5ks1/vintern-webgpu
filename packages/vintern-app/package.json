@@ -5,6 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prebuild": "cd ../.. && ./node_modules/.bin/turbo build --filter=@huggingface/transformers",
     "build": "vite build",
     "preview": "vite preview"
   },
