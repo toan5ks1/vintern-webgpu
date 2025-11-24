@@ -10,14 +10,11 @@ export default defineConfig({
       'Cross-Origin-Opener-Policy': 'same-origin',
       'Cross-Origin-Embedder-Policy': 'require-corp',
     },
-    fs: {
-      // Allow serving files from one level up to the project root
-      allow: ['..', '../../models']
-    }
   },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
+      '@huggingface/transformers': path.resolve(__dirname, '../transformers/dist/transformers.web.js'),
     },
   },
 })
